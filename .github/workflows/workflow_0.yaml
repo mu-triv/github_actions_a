@@ -11,11 +11,19 @@ jobs:
       with: 
         repository: mu-triv/github_actions_a
         path: github_actions_a
-    - name: run a
+    - name: print README a
       run: |
         ls -la .
         cat README.md
       working-directory: ./github_actions_a
+
+    - name: archive artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        retention-days: 1
+        path: README.md
+
       
   job-b:
     runs-on: ubuntu-latest
@@ -27,9 +35,19 @@ jobs:
         repository: mu-triv/github_actions_b
         path: github_actions_b
 
-    - name: run b
+    - name: print README b
       run: |
         ls -la .
         cat README.md
       working-directory: ./github_actions_b
 
+    - name: Download a single artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: my-artifact
+
+    - name: print README a
+      run: |
+        ls -la .
+        cat README.md
+      working-directory: ./github_actions_b
