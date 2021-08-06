@@ -9,8 +9,9 @@ jobs:
     - name: run a
       uses: actions/checkout@v2
       run: ls -la .
-      with: mu-triv/github_actions_a
-      working-directory: ./github_actions_a
+      with: 
+        repository: mu-triv/github_actions_a
+        path: github_actions_a
       
   job-b:
     runs-on: ubuntu-latest
@@ -19,7 +20,8 @@ jobs:
     - name: run b
       uses: actions/checkout@v2
       run: ls -la .
-      with: mu-triv/github_actions_b
-      working-directory: ./github_actions_b
+      with: 
+        repository: mu-triv/github_actions_b
+        path: github_actions_b
 
 
