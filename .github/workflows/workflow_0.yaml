@@ -12,7 +12,9 @@ jobs:
         repository: mu-triv/github_actions_a
         path: github_actions_a
     - name: run a
-      run: ls -la .
+      run: |
+        ls -la .
+        cat README.md
       working-directory: ./github_actions_a
       
   job-b:
@@ -26,6 +28,8 @@ jobs:
         path: github_actions_b
 
     - name: run b
-      run: ls -la .
+      run: |
+        ls -la .
+        cat README.md
       working-directory: ./github_actions_b
 
