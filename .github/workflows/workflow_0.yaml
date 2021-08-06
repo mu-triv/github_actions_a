@@ -22,8 +22,7 @@ jobs:
       with:
         name: my-artifact
         retention-days: 1
-        path: README.md
-        working-directory: ./github_actions_a
+        path: ./github_actions_a/README.md
 
   job-b:
     runs-on: ubuntu-latest
