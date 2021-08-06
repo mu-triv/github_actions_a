@@ -6,22 +6,26 @@ jobs:
   job-a:
     runs-on: ubuntu-latest
     steps:
-    - name: run a
+    - name: checkout a
       uses: actions/checkout@v2
-      run: ls -la .
       with: 
         repository: mu-triv/github_actions_a
         path: github_actions_a
+    - name: run a
+      run: ls -la .
+      working-directory: ./github_actions_a
       
   job-b:
     runs-on: ubuntu-latest
     needs: job-a
     steps:
-    - name: run b
+    - name: checkout b
       uses: actions/checkout@v2
-      run: ls -la .
       with: 
         repository: mu-triv/github_actions_b
         path: github_actions_b
 
+    - name: run b
+      run: ls -la .
+      working-directory: ./github_actions_b
 
