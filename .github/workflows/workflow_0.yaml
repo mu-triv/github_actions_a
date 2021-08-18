@@ -39,7 +39,6 @@ jobs:
     - name: print README b
       run: |
         ls -la .
-        ls -la ./for_archive/.
         cat README.md
       working-directory: ./github_actions_b
 
@@ -51,4 +50,5 @@ jobs:
     - name: print README a
       run: |
         ls -la .
+        ls -la ./for_archive/.
         cat README.md
