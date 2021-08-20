@@ -23,7 +23,7 @@ jobs:
         echo "${MY_NAME}"
         echo "${{ env.ALL_NAME }}"
         echo "${ALL_NAME}"
-        echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+        echo "GITHUB_ACTION_PATH: $GITHUB_ACTION_PATH"
         echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
         echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
       working-directory: ./github_actions_a
