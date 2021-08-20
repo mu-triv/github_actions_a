@@ -3,7 +3,7 @@ name: workflow on multiple repos
 on: [push, pull_request]
 env:
   MY_NAME: VU Khac Tri
-  ALL_NAME: ${{ MY_NAME }} & NGUYEN Hong Diep
+  ALL_NAME: ${MY_NAME} & NGUYEN Hong Diep
 
 jobs:
   job-a:
@@ -23,7 +23,9 @@ jobs:
         echo "${MY_NAME}"
         echo "${{ env.ALL_NAME }}"
         echo "${ALL_NAME}"
-        echo ${ALL_NAME}
+        echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+        echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+        echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
       working-directory: ./github_actions_a
 
     - name: archive artifacts
