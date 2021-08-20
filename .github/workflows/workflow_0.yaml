@@ -15,6 +15,7 @@ jobs:
       run: |
         ls -la .
         cat README.md
+        echo "user ID is: ${UID}"
       working-directory: ./github_actions_a
 
     - name: archive artifacts
