@@ -19,7 +19,7 @@ jobs:
         cat README.md
         echo "user ID is: ${UID}"
         echo "${{ env.MY_NAME }}"
-        echo "${env.MY_NAME}"
+        echo "${MY_NAME}"
       working-directory: ./github_actions_a
 
     - name: archive artifacts
