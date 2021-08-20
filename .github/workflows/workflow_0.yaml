@@ -1,6 +1,8 @@
 
 name: workflow on multiple repos
 on: [push, pull_request]
+env:
+  MY_NAME: VU Khac Tri
 
 jobs:
   job-a:
@@ -16,6 +18,8 @@ jobs:
         ls -la .
         cat README.md
         echo "user ID is: ${UID}"
+        echo "${{ env.MY_NAME }}"
+        echo "${env.MY_NAME}"
       working-directory: ./github_actions_a
 
     - name: archive artifacts
