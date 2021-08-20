@@ -3,7 +3,7 @@ name: workflow on multiple repos
 on: [push, pull_request]
 env:
   MY_NAME: VU Khac Tri
-  ALL_NAME: ${MY_NAME} & NGUYEN Hong Diep
+  ALL_NAME: ${{ MY_NAME }} & NGUYEN Hong Diep
 
 jobs:
   job-a:
