@@ -63,3 +63,9 @@ jobs:
         ls -la .
         ls -la ./for_archive/.
         cat README.md
+        
+    - name: folder hash
+      uses: theowenyoung/folder-hash@v2.0.1
+      with:
+        path: ./for_archive/.
+        
