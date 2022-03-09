@@ -68,4 +68,12 @@ jobs:
       uses: theowenyoung/folder-hash@v2.0.1
       with:
         path: ./for_archive/.
+
+    - name: folder hash tar
+      run:
+        tar -c ./for_archive/. | md5sum
+      uses: actions/cache@v2
+      with:
+        path: ./for_archive
+        key: ${{ env.cache-name }}-${{ hashFiles('./for_archive/**') }}
         
