@@ -75,5 +75,5 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ./for_archive
-        key: tar -c ./for_archive | md5sum
+        key: ${ tar -c ./for_archive | md5sum }
         
