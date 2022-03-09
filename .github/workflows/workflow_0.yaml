@@ -75,5 +75,5 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ./for_archive
-        # key: ${{ env.cache-name }}-${{ hashFiles('./for_archive/**') }}
+        key: ${{ env.cache-name }}-${{ hashFiles('./for_archive/**') }}
         
